@@ -1,5 +1,16 @@
 "use stricte";
-function sum (a,b) {
-return a * b;
+function genericFun (a,b,c) {
+switch (c) {
+    case "+":return a + b;
+     
+     case "*": return a * b;
+     
+     case "/": return a / b;
+     
+     case "-": return a - b;
+     default: return"invalid argument";
 }
-console.log(sum(3,4));
+
+}
+console.log(genericFun(2,3,'*'));
+
