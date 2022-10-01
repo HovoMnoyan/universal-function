@@ -1,7 +1,9 @@
 "use stricte";
-let arr = [];
-let btn = document.querySelector(".btn"),
-    valueInput = document.querySelector(".value"); //input two numbers and a symbol
+
+let btns = document.querySelectorAll("button"),
+    valueInputOne = document.querySelector("#value_number_one"),
+    valueInputTwo = document.querySelector("#value_number_two");
+
 function getResult(x, y, mathSymbol) {
     switch (mathSymbol) {
         case "+": return x + y;
@@ -12,15 +14,8 @@ function getResult(x, y, mathSymbol) {
     }
 }
 
-  btn.addEventListener("click", function () {
-        for (let i = 0; i < valueInput.value.length; i++) {
-            arr.push(valueInput.value[i]);
-       }
-        if (arr.length === 3) {
-            setTimeout(alert(getResult (+arr[0],+arr[1],arr[2])), 500);
-      }
-      arr = [];
+btns.forEach(function (item) {
+    item.addEventListener("click", (e) => {
+        alert(getResult (valueInputOne.value,valueInputTwo.value,e.target.value));
   });
-  
-  
-  
+});  

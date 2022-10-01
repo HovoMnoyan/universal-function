@@ -8,14 +8,22 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <div class="container">
+   <div class="wrapper">
+    <!-- <div class="container"> -->
         <div class="content">
             <form>
-                <input type="text" class="value">
+                <input type="number" id="value_number_one">
+                <input type="number" id="value_number_two">
             </form>
-            <button class="btn">push</button>
+            <div class="buttons-group">
+                <button class="btn" value="+">+</button>
+                <button class="btn" value="-">-</button>
+                <button class="btn" value="*">&#8727;</button>
+                <button class="btn" value="/">&divide;</button>
+            </div>
         </div>
-    </div>
+    <!-- </div> -->
+   </div>
     <script src="script/script.js"></script>
 </body>
 </html>
