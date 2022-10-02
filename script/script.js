@@ -4,26 +4,28 @@ let btns = document.querySelectorAll(".btn"),
     display = document.querySelector(".display"),
     btnOnOff = document.querySelector("#btns"),
     btnAc = document.querySelector(".btns"),
-    btn1 = document.querySelector(".btn1");
-    let arr = [];
+    btn1 = document.querySelector(".btn1"),
+    arr = [];
+
     btns.forEach((item) => {
-item.addEventListener("click", (e) => {
-display.innerHTML += e.target.value;
-for (let i = 0; i < display.textContent.length; i++) {
-    if (display.textContent[i] === "+" || display.textContent[i] === "-" || display.textContent[i] === "*" || display.textContent[i] === "/" ) {
-        
-arr[0] = display.textContent.substring(0, i);
-arr[1] = display.textContent.substring(i + 1, display.textContent.length );
-arr[2] = display.textContent.substring(i, i + 1);
-console.log(arr);
+        item.addEventListener("click", (e) => {
+            display.innerHTML += e.target.value;
+            for (let i = 0; i < display.textContent.length; i++) {
+            if (display.textContent[i] === "+" || display.textContent[i] === "-" || display.textContent[i] === "*" || display.textContent[i] === "/" ) {
+            arr[0] = display.textContent.substring(0, i);
+            arr[1] = display.textContent.substring(i + 1, display.textContent.length );
+            arr[2] = display.textContent.substring(i, i + 1);
+
     }
 }
 });
     });
+
     btnAc.addEventListener("click", () => {
         display.innerHTML = "";
         arr = [];
     });
+    
     btnAc.addEventListener('click', () => {
 
     });
