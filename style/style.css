@@ -67,4 +67,6 @@ button:hover {
    gap: 10px;
     background-color: aqua;
     width: 300px;
+} .block {
+    display: block;
 }
