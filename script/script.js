@@ -12,7 +12,7 @@ let newArryTwo = [];
 let i = 0;
 let str = "";
 let boolianShafl = true;
-let buttonsBoolian = 1;
+let buttonsBoolian = true;
 function multiplication(x, y) {
     return x * y;
 }
@@ -73,23 +73,19 @@ function clearDisplay() {
     str = "";
 }
 function onOff() {
-btns.forEach(function(item) {
-    item.disabled = buttonsBoolian;
-    if(buttonsBoolian === 1) {
-        buttonsBoolian = 0;
-    } else {
-        buttonsBoolian = 1;
-        arr = [];
-        sum = 0;
-        newArryOne = [];
-        newArryTwo = [];
-        i = 0;
-        str = "";
-        boolianShafl = true;
-        buttonsBoolian = 1;
-        display.innerHTML = "";
-        }
-    }); 
+        btns.forEach(function(item) {
+            item.disabled = buttonsBoolian;
+            arr = [];
+            sum = 0;
+            newArryOne = [];
+            newArryTwo = [];
+            i = 0;
+            str = "";
+            boolianShafl = true;
+            display.innerHTML = "";
+        });
+
+        buttonsBoolian = !buttonsBoolian; 
 }
 function finelResualt(arr, sum) {
     sum = +arr[0];
@@ -103,7 +99,7 @@ function finelResualt(arr, sum) {
     }
     return sum;
 }
-onOff();
+// onOff();
 
 btns.forEach((item) => {
     distinguiseSymbol(item);
