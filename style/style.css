@@ -1,27 +1,42 @@
+* {
+    width: 100%;
+    height: 100%;
+}
 body {
+    min-width: 100%;
+    min-height: 100%;
     background-image: url("https://img2.goodfon.com/original/1366x768/1/eb/matrica-siniy-svet.jpg");
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
 }
 .wrapper {
     width: 500px;
     height: 500px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 .content {
     display: flex;
     /* justify-content: center; */
     /* align-items: center; */
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-    margin-top: 80px;
+    width: 64%;
+    height: 57%;
+    justify-content: center;
     gap: 10px;
+    background-color: rgb(232, 180, 13);
+    border-radius: 10%;
 }
 form {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 10px;
+}
+.inputs {
+    display: flex;
+    justify-content: center;
 }
 .display {
     width: 86%;
@@ -30,14 +45,16 @@ form {
     font-weight: bold;
     outline: none;
     border: none;
-    background-color: rgba(255, 255, 255, .1);
+    background-color: rgba(12, 215, 237, 0.1);
     border-bottom: 2px solid #000;
-    color: rgb(252, 15, 114);
+    color: rgb(22, 1, 10);
+    display: flex;
+    justify-content: center;
+    
 }
 .buttons-group {
     display: flex;
-    /* flex-direction: row; */
-  
+    justify-content: center;
     gap: 10px;
     
 }
@@ -53,20 +70,17 @@ button {
     
 }
 button:hover {
-    background-color: rgb(109, 19, 144);
+    background-color: rgb(15, 124, 241);
 }
 .buttons-group1 {
     display: flex;
-    /* flex-direction: row; */
     gap: 10px;
+    justify-content: center;
     
 }
 .footer_btns {
     display: flex;
-    /* flex-direction: row; */
-   gap: 10px;
+    gap: 10px;
     background-color: aqua;
     width: 300px;
-} .block {
-    display: block;
 }

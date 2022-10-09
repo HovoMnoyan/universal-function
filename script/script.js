@@ -23,11 +23,14 @@ function subtraction(x, y) {
 function distinguiseSymbol(item) {
     item.addEventListener("click", (e) => {
         if (e.target.value !== "+" && e.target.value !== "-" && e.target.value !== "*" && e.target.value !== "/") {
+            
             str += e.target.value;
             arr[i] = str;
             display.innerHTML += e.target.value;
             boolianShafl = true;
-        } else if (boolianShafl) {
+        }else if(arr.length === 0) {
+            boolianShafl = false;
+        }else if (boolianShafl) {
             str = "";
             arr[i + 1] = e.target.value;
             i += 2;
@@ -73,7 +76,7 @@ function clearDisplay() {
     str = "";
 }
 function onOff() {
-        btns.forEach(function(item) {
+    btns.forEach(function(item) {
             item.disabled = buttonsBoolian;
             arr = [];
             sum = 0;
@@ -84,9 +87,10 @@ function onOff() {
             boolianShafl = true;
             display.innerHTML = "";
         });
-
-        buttonsBoolian = !buttonsBoolian; 
+    buttonsBoolian = !buttonsBoolian;
+    return buttonsBoolian;
 }
+
 function finelResualt(arr, sum) {
     sum = +arr[0];
     for(let i = 0; i < arr.length - 1 / 2; i += 2) {
@@ -99,15 +103,26 @@ function finelResualt(arr, sum) {
     }
     return sum;
 }
-// onOff();
 
 btns.forEach((item) => {
     distinguiseSymbol(item);
 });
 
 btn1.addEventListener('click',() => {
+     if(arr.length < 1) {
+        arr = [];
+        sum = 0;
+        newArryOne = [];
+        newArryTwo = [];
+        i = 0;
+        str = "";
+        boolianShafl = true;
+     } else {
+        
     getMultiplicationSubtraction();
     showInDIspaly();
+     }
+
 });
 btnAc.addEventListener("click", () => {
     clearDisplay();
