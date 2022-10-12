@@ -13,6 +13,7 @@ let i = 0;
 let str = "";
 let boolianShafl = true;
 let buttonsBoolian = true;
+
 function multiplication(x, y) {
     return x * y;
 }
@@ -20,10 +21,10 @@ function multiplication(x, y) {
 function subtraction(x, y) {
     return x / y;
 }
+
 function distinguiseSymbol(item) {
     item.addEventListener("click", (e) => {
         if (e.target.value !== "+" && e.target.value !== "-" && e.target.value !== "*" && e.target.value !== "/") {
-            
             str += e.target.value;
             arr[i] = str;
             display.innerHTML += e.target.value;
@@ -39,6 +40,7 @@ function distinguiseSymbol(item) {
         }
     });
 }
+
 function getMultiplicationSubtraction() {
     for (let i = 0; i < arr.length ; i ++) {
         if (arr[i] === "*" || arr[i] === "/") {
@@ -61,6 +63,7 @@ function getMultiplicationSubtraction() {
     }
     return sum;
 }
+
 function showInDIspaly() {
     display.innerHTML = finelResualt(arr, sum);
     arr = [];
@@ -69,12 +72,14 @@ function showInDIspaly() {
     boolianShafl = true;
     str = "";
 }
+
 function clearDisplay() {
     display.innerHTML = "";
     arr = [];
     i = 0;
     str = "";
 }
+
 function onOff() {
     btns.forEach(function(item) {
             item.disabled = buttonsBoolian;
@@ -107,7 +112,7 @@ function finelResualt(arr, sum) {
 btns.forEach((item) => {
     distinguiseSymbol(item);
 });
-
+onOff();
 btn1.addEventListener('click',() => {
      if(arr.length < 1) {
         arr = [];

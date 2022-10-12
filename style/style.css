@@ -1,14 +1,24 @@
+
+@font-face {
+    font-family: "digital-7";
+    src: url("digital-7.eot");
+    src: url("../font/digital-7.woff") format("woff");
+    src: url("../font/digital-7.woff2") format("woff2");
+    }
+
 * {
-    width: 100%;
-    height: 100%;
+    width: 99.2%;
+    height: 99.2%;
 }
 body {
     min-width: 100%;
     min-height: 100%;
-    background-image: url("https://img2.goodfon.com/original/1366x768/1/eb/matrica-siniy-svet.jpg");
-    background-repeat: no-repeat;
+    background-image: url("https://i.pinimg.com/736x/5a/f5/e3/5af5e3390ad19b67f22d44adf257af6c.jpg");
     display: flex;
     justify-content: center;
+   background-size: 100%;
+   background-repeat: no-repeat;
+
 }
 .wrapper {
     width: 500px;
@@ -18,8 +28,6 @@ body {
 }
 .content {
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
     flex-direction: column;
     width: 64%;
     height: 57%;
@@ -39,24 +47,22 @@ form {
     justify-content: center;
 }
 .display {
+    font-family: "digital-7";
     width: 86%;
     height: 55px;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 30px;
     outline: none;
     border: none;
-    background-color: rgba(12, 215, 237, 0.1);
+    background-color: rgba(102, 124, 105, 0.92);
     border-bottom: 2px solid #000;
     color: rgb(22, 1, 10);
     display: flex;
     justify-content: center;
-    
 }
 .buttons-group {
     display: flex;
     justify-content: center;
     gap: 10px;
-    
 }
 button {
     width: 20%;
@@ -65,12 +71,12 @@ button {
     border: none;
     color: #fff;
     border-radius: 20px;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.784);
     border: 1px solid black;
-    
 }
 button:hover {
-    background-color: rgb(15, 124, 241);
+    transform: scale(.8);
+    background-color: #333;
 }
 .buttons-group1 {
     display: flex;
