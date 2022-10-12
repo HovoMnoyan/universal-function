@@ -122,8 +122,10 @@ btn1.addEventListener('click',() => {
         i = 0;
         str = "";
         boolianShafl = true;
-     } else {
-        
+     } else if ( arr[arr.length-1] === "+" || arr[arr.length-1] === "-" || arr[arr.length-1] === "/" || arr[arr.length-1] === "*") {
+    
+     }else{
+        btn1.disabled = false;
     getMultiplicationSubtraction();
     showInDIspaly();
      }
